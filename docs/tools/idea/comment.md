@@ -28,12 +28,12 @@ public class ${NAME} {
 直接通过快捷键找到live templates，新增一个live template。
 ![insert live template](/images/tools/idea/1.png)   
 然后通过edit variables设置变量值。
-![edit variables](/images/tools/idea/２.png)   
+![edit variables](/images/tools/idea/2.png)   
 ### 方法
 新增方法的live template与类的大同小异，主要关注param,需要用到Groovy
-![insert live template](/images/tools/idea/３.png)  
+![insert live template](/images/tools/idea/3.png)  
 
-![edit variables](/images/tools/idea/４.png)  
+![edit variables](/images/tools/idea/4.png)  
 ```
 groovyScript("def result=''; def params=\"${_1}\".replaceAll('[\\\\[|\\\\]|\\\\s]', '').split(',').toList(); for(i = 0; i < params.size(); i++) {result+=' * @param ' + params[i] + ((i < params.size() - 1) ? '\\n' : '')}; return result", methodParameters())
 ``` 
