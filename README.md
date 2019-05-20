@@ -7,5 +7,7 @@
 ## 算法
 ## 前端
 * [跟着winter学前端](./docs/front-end/README.md)
+## 开发工具
+* [idea](docs/tools/idea/index.md)
 
 
