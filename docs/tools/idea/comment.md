@@ -12,7 +12,7 @@ public class ${NAME} {
 }
 ```
 这里我们主要关注#parse("File Header.java"),这块就是生成类注释的，那么这个.java文件在哪呢？File and Code Templates->includes可以找到！
-直接按照他要求的格式帖如自定义注释，那么当你新建class文件时会自动加上自定义类注释。
+直接按照他要求的格式贴入自定义注释，那么当你新建class文件时会自动加上自定义类注释。
 ```
 /**
  * <p>Title: ${NAME}</p>
@@ -24,7 +24,7 @@ public class ${NAME} {
 ```
 ## live templates
 ### 类
-除了新建，其实我们也会希望能动态地在类上或者方法上增加自定义注释，这个就要设置了live template了！
+除了新建，其实我们也会希望能动态地在类上或者方法上增加自定义注释，这个就要设置live template了！
 直接通过快捷键找到live templates，新增一个live template。
 ![insert live template](/images/tools/idea/1.png)   
 然后通过edit variables设置变量值。
