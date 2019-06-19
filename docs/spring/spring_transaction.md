@@ -15,6 +15,32 @@ NEVER(5),
 NESTED(6);
 ```
 可以看到，默认是使用REQUIRED的，这也是我们最常用的传播性。
+* REQUIRED 当前没有事务，创建事务；若存在事务，在当前事务中执行。   
+eg:可以看到日志，执行departmentService方法是从当前事务中获取session的。
+```
+@Test
+public void testTransaction() {
+    userService.add(User.builder().enName("yhlu").sex(0).name("小陆").build());
+}
+```
+```
+@Override
+@Transactional
+public void add(User user) {
+    this.save(user);
+    iDepartmentService.add(Department.builder().department("test").build());
+}
+```
+```
+@Override
+@Transactional
+public void add(Department department) {
+    this.save(department);
+    throw new IllegalArgumentException();
+}
+```
+![log](/images/spring/transaction/9.jpg)   
+* 
 ## 事务的隔离性
 ```
 Isolation isolation() default Isolation.DEFAULT;
