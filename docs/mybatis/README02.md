@@ -46,7 +46,7 @@ debut看查出来的List，发现只有2条！：
 ![debug](/images/mybatis/3.jpg)  
 ## 解决
 仔细看结果集合，发现是按照sex的类别去查的！mybatis把相同的sex当成同一条记录去处理了！为什么会这样呢？看看我写的resultMap!
-里边除了2个association还有一个我刚加的sex字段！所以mybatis就根据这个字段去标识一条记录了！那么解决方案就很明确了，老老实实把<id>加上！
+里边除了2个association还有一个我刚加的sex字段！所以mybatis就根据这个字段去标识一条记录了！那么解决方案就很明确了，老老实实把标识字段加上！   
 UserMapper.xml里的<resultMap>里加入<id>:
 ```
 <id column="id" property="id" javaType="java.lang.String" jdbcType="VARCHAR"/>
