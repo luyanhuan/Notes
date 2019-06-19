@@ -3,6 +3,9 @@
 ## Spring框架
 * [极客时间Spring全家桶学习心得](./docs/spring/geek/spring.md)
 * [事务](docs/spring/spring_transaction.md)
+## Mybatis
+* [结果集映射嵌套对象](./docs/mybatis/README01.md)
+* [记录一次resuleMap未给id的踩坑血泪史](./docs/mybatis/README02.md)
 ## 数据库
 ## java
 ## 算法
